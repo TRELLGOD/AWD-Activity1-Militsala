@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: white; box-shadow: 2px 2px 12px rgba(0,0,0,0.1); }
+        input, button { margin: 10px; padding: 10px; font-size: 16px; }
+        button { background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+    <script>
+        function checkEvenOdd() {
+            let num = document.getElementById("number").value;
+            let result = (num % 2 === 0) ? "Even" : "Odd";
+            document.getElementById("result").innerText = "The number is " + result;
+        }
+
+        function loopExample() {
+            let output = "";
+            for (let i = 1; i <= 5; i++) {
+                output += "Number " + i + "\n";
+            }
+            alert(output);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Demo</h1>
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number">
+        <button onclick="checkEvenOdd()">Check Even/Odd</button>
+        <p id="result"></p>
+        <button onclick="loopExample()">Show Loop Example</button>
+        <br>
+        <button onclick="location.href='index.html'">Back to Landing Page</button>
+    </div>
+</body>
+</html>
